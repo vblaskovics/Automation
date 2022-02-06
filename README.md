@@ -4,8 +4,8 @@ Ez a repo oktatási céllal készült. Olyan demo felületeket tartalmaz, amelye
 
 ## Feladatok
 
-### 1. Elemek megkeresése
-1. A [Hello World oldalból](https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html) indulj ki!
+### 1. Elem kiválasztása
+1. A [Hello World oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/01_hello_world.html) indulj ki!
 1. Ellenőrizd, hogy a böngészőlap címe: "Hello World"! 
 2. Keresd meg a "Hello Selenium!" elemet az oldalon, és ellenőrizd, hogy a szöveg tartalma valóban "Hello Selenium!" - id alapján!
 3. Keresd meg az alcímet, és ellenőrizd, hogy a felírata: "Ez egy alcím" - class alapján!
@@ -18,3 +18,6 @@ Ez a repo oktatási céllal készült. Olyan demo felületeket tartalmaz, amelye
 8. Vegyél fel egy új ellenőrzést a legelső ellenőrzés elé, amiben szintén a HW/001 mező értékét ellenőrzöd! Most is úgy indítsd a tesztet, hogy először az Elront gombra kattintassz, viszont most úgy csináld meg az ellenőrzést, hogy ennél a pontnál ne álljon meg a teszt!
 9. Comment-eld ki az Elront gombra való kattintást!
 
+### 2. Varakozás
+
+1. 
