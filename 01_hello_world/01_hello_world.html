@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,49 @@
     <title>Hello World</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
+
 <body>
-    <div class="container block">
-        <div id="main-title" class="title">Hello Selenium!</div>
-        <div class="subtitle">This is just a dummy page</div>
+    <div class="box">
+        <div class="columns">
+            <div class="column is-four-fifths">
+                <div id="main-title" class="title">Hello Selenium!</div>
+            </div>
+            <div class="column">
+                <div class="button is-info" onclick="pageModify()">Változtat</div>
+            </div>
+            <div class="column">
+                <div class="button is-danger" onclick="pageRuin()">Elront</div>
+            </div>
+        </div>
     </div>
+    <div class="container block">
+        <div class="subtitle">Ez egy alcím</div>
+
+        <div class="box">
+            <p class="label">Azonosító</p>
+            <p id="id-field">HW/001</p>
+            <div class="block"></div>
+            <p class="label">Email</p>
+            <p id="email-field">test@example.com</p>
+            <div class="block"></div>
+            <p class="label">Dátum</p>
+            <p id="date-field">2022.01.03</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function pageModify(){
+            document.getElementById('id-field').textContent = "HW/025"
+            document.getElementById('email-field').textContent = "modified_test@example.org"
+            document.getElementById('date-field').textContent = "2010.03.12"
+        }
+        function pageRuin(){
+            document.getElementById('main-title').textContent = "Error happened"
+            document.getElementById('id-field').textContent = "-"
+            document.getElementById('email-field').textContent = "-"
+            document.getElementById('date-field').textContent = "-"
+        }
+    </script>
 </body>
+
 </html>
