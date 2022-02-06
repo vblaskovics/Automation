@@ -1,0 +1,47 @@
+{
+  "id": "9fc72b88-0e33-4eaf-9b96-cabb95e84471",
+  "version": "2.0",
+  "name": "GroupamaSeleniumIDE",
+  "url": "https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html",
+  "tests": [{
+    "id": "5b2453c0-1b42-4179-a9b1-82ac04ad3ad0",
+    "name": "01_elemek",
+    "commands": [{
+      "id": "e327c018-673e-4e76-a106-3fa1b5d1479d",
+      "comment": "",
+      "command": "open",
+      "target": "https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e1ef6da-6e00-4b56-a9f7-170c24d2aa43",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Hello World",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13c9b5b7-751a-4012-8f9d-9590f1cf3580",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=main-title",
+      "targets": [
+        ["id=main-title", "id"],
+        ["css=#main-title", "css:finder"],
+        ["xpath=//div[@id='main-title']", "xpath:attributes"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": "Hello Selenium!"
+    }]
+  }],
+  "suites": [{
+    "id": "244f44f7-6576-4e89-a4e0-e5c78171a6e4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5b2453c0-1b42-4179-a9b1-82ac04ad3ad0"]
+  }],
+  "urls": ["https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html"],
+  "plugins": []
+}
