@@ -29,8 +29,8 @@
         <div class="container block">
             <div class="columns">
                 <div class="column is-half">
-                    <div v-for="termek in termekek" :key="termek.id" id="termek.id"
-                        class="box has-background-white-ter">
+                    <div v-for="termek in termekek" :key="termek.id" class="box has-background-white-ter"
+                        :id="termek.id">
                         <h2 class="block is-size-4">{{ termek.name }}</h2>
                         <button class="button is-link" v-on:click="showDetails(termek)"
                             :class="{'is-loading': termek.loading}" v-if="!termek.details">Részletek</button>
