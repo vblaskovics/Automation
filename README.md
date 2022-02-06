@@ -20,4 +20,4 @@ Ez a repo oktatási céllal készült. Olyan demo felületeket tartalmaz, amelye
 
 ### 2. Varakozás
 
-1. 
+1. A [Webshop oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html) indulj ki!
