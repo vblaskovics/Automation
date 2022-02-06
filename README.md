@@ -21,10 +21,9 @@ A [Hello World oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages
 ### 2. Varakozás
 
 A [Webshop oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html) indulj ki!
-1. Adj hozzá terméket a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni!
-2. Adj hozzá másik terméket is a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni!
-3. Ellenőrizd, hogy tudod-e növelni és csökkenteni a termékek számát!
-4. Nyomd meg az első termék Részletek gombját, és ellenőrizd, hogy megjelennek-e a részletek!
+1. Add hozzá az első terméket a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni!
+2. Ellenőrizd, hogy tudod-e növelni és csökkenteni a termékek számát!
+3. Nyomd meg a második termék Részletek gombját, és ellenőrizd, hogy megjelennek-e a részletek!
     - Mikor Xpath és mikor css?
     - Várakozni kell
-5. Ezután nyomd meg a második Részletek termék gombját, és ellenőrizd, 
+4. Add hozzá a harmadik terméket is a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni! (Figyeld a selector-t!)

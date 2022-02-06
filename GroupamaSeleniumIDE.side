@@ -66,7 +66,7 @@
     }]
   }, {
     "id": "d7833103-9e39-4318-addf-52fee0100d16",
-    "name": "02_webshop",
+    "name": "02_waiting",
     "commands": [{
       "id": "c5efe6a3-7c42-461a-81d0-d378066d1ec4",
       "comment": "",
@@ -75,41 +75,201 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "d7c10e7a-c54b-44fd-be5c-0009046db084",
+      "comment": "1. Add hozzá az első terméket a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "09d97870-3153-41d9-9156-491beb1bbd18",
       "comment": "",
       "command": "click",
       "target": "css=#termek-01 > .button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b065d677-5f31-4de9-a34b-b46103793229",
+      "comment": "",
+      "command": "click",
+      "target": "css=.is-dark",
       "targets": [
-        ["css=#termek-01 > .button", "css:finder"],
-        ["xpath=//div[@id='termek-01']/button", "xpath:idRelative"],
+        ["css=.is-dark", "css:finder"],
+        ["xpath=//div[@id='termek-01']/div/button", "xpath:idRelative"],
         ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Megrendelem')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a7c6c73-f212-438e-9c10-d0fe205b0fa3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.mr-2:nth-child(1)",
+      "targets": [
+        ["css=.mr-2:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='ordered-items']/li/p", "xpath:idRelative"],
+        ["xpath=//li/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Termek 1,')]", "xpath:innerText"]
+      ],
+      "value": "Termek 1,"
+    }, {
+      "id": "95f49aaf-5821-4e09-9ed2-29f05fe3c2ff",
+      "comment": "2. Ellenőrizd, hogy tudod-e növelni és csökkenteni a termékek számát!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30eb4064-db39-4e33-a637-f770ba2ca591",
+      "comment": "",
+      "command": "click",
+      "target": "css=.is-flex:nth-child(1) .fa-plus",
+      "targets": [
+        ["css=.is-flex:nth-child(1) .fa-plus", "css:finder"],
+        ["xpath=//ul[@id='ordered-items']/li/p[5]/span/i", "xpath:idRelative"],
+        ["xpath=//p[5]/span/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d77dc30b-6b05-40c5-8d70-1bf24bde2e2f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.is-flex:nth-child(1) > .mr-2:nth-child(4)",
+      "targets": [
+        ["css=.is-flex:nth-child(1) > .mr-2:nth-child(4)", "css:finder"],
+        ["xpath=//ul[@id='ordered-items']/li/p[4]", "xpath:idRelative"],
+        ["xpath=//p[4]", "xpath:position"],
+        ["xpath=//p[contains(.,'2 db')]", "xpath:innerText"]
+      ],
+      "value": "2 db"
+    }, {
+      "id": "c5bb0a33-d720-4203-8708-0ffdd1f6cca4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.is-flex:nth-child(1) .fa-minus",
+      "targets": [
+        ["css=.is-flex:nth-child(1) .fa-minus", "css:finder"],
+        ["xpath=//ul[@id='ordered-items']/li/p[3]/span/i", "xpath:idRelative"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1164e32-f2e2-4ed0-a490-9e44d8a723d4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.is-flex:nth-child(1) > .mr-2:nth-child(4)",
+      "targets": [
+        ["css=.is-flex:nth-child(1) > .mr-2:nth-child(4)", "css:finder"],
+        ["xpath=//ul[@id='ordered-items']/li/p[4]", "xpath:idRelative"],
+        ["xpath=//p[4]", "xpath:position"],
+        ["xpath=//p[contains(.,'2 db')]", "xpath:innerText"]
+      ],
+      "value": "1 db"
+    }, {
+      "id": "2922613f-16c6-48e8-b940-29366d5308f1",
+      "comment": "3. Nyomd meg a második termék Részletek gombját, és ellenőrizd, hogy megjelennek-e a részletek!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c242fa7d-301f-4643-833c-be4127271e4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#termek-02 > .button",
+      "targets": [
+        ["css=#termek-02 > .button", "css:finder"],
+        ["xpath=//div[@id='termek-02']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
         ["xpath=//button[contains(.,'Részletek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4f0b1c6-4620-47c4-abd3-9c340fa2291f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#termek-02 > .details",
+      "targets": [
+        ["css=#termek-03 > .details", "css:finder"],
+        ["xpath=//div[@id='termek-03']/div", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "c0a5fdfe-0f6b-4068-8a92-e85b8e28f9a2",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#termek-02 .block:nth-child(2)",
+      "targets": [
+        ["css=#termek-03 .block:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='termek-03']/div/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/p", "xpath:position"]
+      ],
+      "value": "Súly: 2 kg"
+    }, {
+      "id": "17168223-762d-41f3-856b-9aa24f3a2257",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#termek-02 .block:nth-child(3)",
+      "targets": [
+        ["css=#termek-03 .block:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='termek-03']/div/p[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Ár: 9800 Ft')]", "xpath:innerText"]
+      ],
+      "value": "Ár: 1200 Ft"
+    }, {
+      "id": "c2d50c1f-85da-40d5-a764-f5b89885e2db",
+      "comment": "4. Add hozzá a harmadik terméket is a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d04589c7-6e8d-42ee-b7a7-dc72f9988b39",
+      "comment": "",
+      "command": "click",
+      "target": "css=#termek-03 .button",
+      "targets": [
+        ["css=#termek-02 .button", "css:finder"],
+        ["xpath=//div[@id='termek-02']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
       ],
       "value": ""
     }, {
       "id": "b48f8111-e511-4a15-af95-5d6a93730913",
       "comment": "",
       "command": "waitForElementPresent",
-      "target": "css=#termek-01 .details button",
+      "target": "css=#termek-03 > .details",
       "targets": [
-        ["css=.is-dark", "css:finder"],
-        ["xpath=//div[@id='termek-01']/div/button", "xpath:idRelative"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Megrendelem')]", "xpath:innerText"]
+        ["css=#termek-03 > .details", "css:finder"],
+        ["xpath=//div[@id='termek-03']/div", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div", "xpath:position"]
       ],
       "value": "30000"
     }, {
-      "id": "7a36edf0-b682-4280-95af-9f89cbc7ce68",
+      "id": "8641c3ff-9ec0-417c-8d50-63cbc38828bf",
       "comment": "",
-      "command": "assertText",
-      "target": "css=#termek-01 .details button",
+      "command": "click",
+      "target": "css=#termek-03 .button",
       "targets": [
-        ["css=.is-dark", "css:finder"],
-        ["xpath=//div[@id='termek-01']/div/button", "xpath:idRelative"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Megrendelem')]", "xpath:innerText"]
+        ["css=#termek-02 .button", "css:finder"],
+        ["xpath=//div[@id='termek-02']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"]
       ],
-      "value": "Megrendelem"
+      "value": ""
+    }, {
+      "id": "1d34d40a-bcea-48f3-a08b-a706f5e63b3b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.is-flex:nth-child(2) > .mr-2:nth-child(1)",
+      "targets": [
+        ["css=.is-flex:nth-child(2) > .mr-2:nth-child(1)", "css:finder"],
+        ["xpath=//ul[@id='ordered-items']/li[2]/p", "xpath:idRelative"],
+        ["xpath=//li[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Termek 3,')]", "xpath:innerText"]
+      ],
+      "value": "Termek 3,"
     }]
   }],
   "suites": [{
