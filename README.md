@@ -9,10 +9,12 @@ Ez a repo oktatási céllal készült. Olyan demo felületeket tartalmaz, amelye
 1. Ellenőrizd, hogy a böngészőlap címe: "Hello World"! 
 2. Keresd meg a "Hello Selenium!" elemet az oldalon, és ellenőrizd, hogy a szöveg tartalma valóban "Hello Selenium!" - id alapján!
 3. Keresd meg az alcímet, és ellenőrizd, hogy a felírata: "Ez egy alcím" - class alapján!
-4. Ellenőrizd, hogy az azonosító "HW/" előtaggal kezdődik, és utána 3 karakter követi!
-5. Ellenőrizd, hogy az email-ben van @ és pont karakter!
-6. Ellenőrizd, hogy a dátum ÉÉÉÉ.HH.NN formátumú!
-7. Indítsd úgy a tesztet, hogy az elején rákattintassz a Változtass gombra
-    - Ellenőrizd, hogy a tesztek továbbra is lefutnak-e!
-8. Indítsd úgy a tesztet, hogy az elején rákattintassz az Elront gombra
+4. Ellenőrizd, hogy az azonosító: "HW/001"!
+5. Ellenőrizd, hogy az email: test@example.com!
+6. Ellenőrizd, hogy a dátum 2022.01.03!
+7. Indítsd úgy a tesztet, hogy az elején rákattintassz az Elront gombra
     - Ellenőrizd, hogy a tesztek hibát jeleznek-e!
+    - Keresd meg a hibáról készült log-ot!
+8. Vegyél fel egy új ellenőrzést a legelső ellenőrzés elé, amiben szintén a HW/001 mező értékét ellenőrzöd! Most is úgy indítsd a tesztet, hogy először az Elront gombra kattintassz, viszont most úgy csináld meg az ellenőrzést, hogy ennél a pontnál ne álljon meg a teszt!
+
+
