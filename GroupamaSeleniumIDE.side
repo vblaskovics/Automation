@@ -2,7 +2,7 @@
   "id": "9fc72b88-0e33-4eaf-9b96-cabb95e84471",
   "version": "2.0",
   "name": "GroupamaSeleniumIDE",
-  "url": "https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html",
+  "url": "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html",
   "tests": [{
     "id": "5b2453c0-1b42-4179-a9b1-82ac04ad3ad0",
     "name": "01_elemek",
@@ -64,6 +64,53 @@
       "targets": [],
       "value": "HW/001"
     }]
+  }, {
+    "id": "d7833103-9e39-4318-addf-52fee0100d16",
+    "name": "02_webshop",
+    "commands": [{
+      "id": "c5efe6a3-7c42-461a-81d0-d378066d1ec4",
+      "comment": "",
+      "command": "open",
+      "target": "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09d97870-3153-41d9-9156-491beb1bbd18",
+      "comment": "",
+      "command": "click",
+      "target": "css=#termek-01 > .button",
+      "targets": [
+        ["css=#termek-01 > .button", "css:finder"],
+        ["xpath=//div[@id='termek-01']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Részletek')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b48f8111-e511-4a15-af95-5d6a93730913",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#termek-01 .details button",
+      "targets": [
+        ["css=.is-dark", "css:finder"],
+        ["xpath=//div[@id='termek-01']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Megrendelem')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "7a36edf0-b682-4280-95af-9f89cbc7ce68",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#termek-01 .details button",
+      "targets": [
+        ["css=.is-dark", "css:finder"],
+        ["xpath=//div[@id='termek-01']/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Megrendelem')]", "xpath:innerText"]
+      ],
+      "value": "Megrendelem"
+    }]
   }],
   "suites": [{
     "id": "244f44f7-6576-4e89-a4e0-e5c78171a6e4",
@@ -73,6 +120,6 @@
     "timeout": 300,
     "tests": ["5b2453c0-1b42-4179-a9b1-82ac04ad3ad0"]
   }],
-  "urls": ["https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html"],
+  "urls": ["https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html", "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html"],
   "plugins": []
 }
