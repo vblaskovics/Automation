@@ -16,5 +16,5 @@ Ez a repo oktatási céllal készült. Olyan demo felületeket tartalmaz, amelye
     - Ellenőrizd, hogy a tesztek hibát jeleznek-e!
     - Keresd meg a hibáról készült log-ot!
 8. Vegyél fel egy új ellenőrzést a legelső ellenőrzés elé, amiben szintén a HW/001 mező értékét ellenőrzöd! Most is úgy indítsd a tesztet, hogy először az Elront gombra kattintassz, viszont most úgy csináld meg az ellenőrzést, hogy ennél a pontnál ne álljon meg a teszt!
-
+9. Comment-eld ki az Elront gombra való kattintást!
 
