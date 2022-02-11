@@ -27,3 +27,9 @@ A [Webshop oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/02_
     - Mikor Xpath és mikor css?
     - Várakozni kell
 4. Add hozzá a harmadik terméket is a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni! (Figyeld a selector-t!)
+
+
+### 3. Formok
+A [Form](https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html) indulj ki!
+1. Teszteltd le, hogy ha belekattintassz a név mezőbe, akkor fókuszált állapotba kerül-e!
+

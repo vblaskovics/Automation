@@ -2,7 +2,7 @@
   "id": "9fc72b88-0e33-4eaf-9b96-cabb95e84471",
   "version": "2.0",
   "name": "GroupamaSeleniumIDE",
-  "url": "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html",
+  "url": "http://127.0.0.1:5500/pages/03_form.html",
   "tests": [{
     "id": "5b2453c0-1b42-4179-a9b1-82ac04ad3ad0",
     "name": "01_elemek",
@@ -271,6 +271,101 @@
       ],
       "value": "Termek 3,"
     }]
+  }, {
+    "id": "2847a7c3-e699-4bb2-9fe0-903f9fa930eb",
+    "name": "03_form",
+    "commands": [{
+      "id": "163b0d76-e1eb-43fe-a8f9-d2f90ef553ca",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/pages/03_form.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7d38096-a5e2-4801-a762-af1a1b50fc35",
+      "comment": "1. Írj be a name mezőbe egy nevet, és ellenőrizd, hogy sikerült-e!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebe3f5ae-ab8e-46d8-b6c5-87e8c8285393",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["css=.field:nth-child(1) .input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Péter"
+    }, {
+      "id": "b7ea4f35-8b3d-4f9a-8027-950cbcbbf8f8",
+      "comment": "",
+      "command": "verifyValue",
+      "target": "id=name",
+      "targets": [
+        ["css=.field:nth-child(1) .input", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Péter"
+    }, {
+      "id": "252f67d6-bb18-4da8-a7e9-72d0e1c37427",
+      "comment": "2. Ellenőrizd, hogy az email mezőnek van-e placeholder szövege!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb8ce494-4e59-44b1-8484-4468f4aac385",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//input[@id='email' and @placeholder='Email input']",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecbd4be3-720a-4774-90d2-4b8f1389b9cb",
+      "comment": "// Ellenőrizd, hogy a Name label össze van-e rendelve az input mezővel!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "596ede68-6261-48d8-b2c2-33b2b3fbb93b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//label[@for='name']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69c2d05e-1de1-41bd-a4d9-919f66026aa5",
+      "comment": "Ellenőrizd, hogy hibaüzenetet kapunk-e, ha @ karakter nélküli emailcímet adunk meg!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0af9a3c-3d32-4b67-95e3-517495c7eda6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.help",
+      "targets": [
+        ["css=.help", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'This email is invalid')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "244f44f7-6576-4e89-a4e0-e5c78171a6e4",
@@ -280,6 +375,6 @@
     "timeout": 300,
     "tests": ["5b2453c0-1b42-4179-a9b1-82ac04ad3ad0"]
   }],
-  "urls": ["https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html", "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html"],
+  "urls": ["https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html", "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html", "http://127.0.0.1:5500/pages/03_form.html"],
   "plugins": []
 }
