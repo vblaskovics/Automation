@@ -60,6 +60,20 @@
         </div>
 
         <div class="field">
+          <label class="label" for="email">Email megerősítése</label>
+          <div class="control has-icons-left has-icons-right">
+            <input v-model="email2" id="email2" class="input" :class="{'is-danger': email2Error}" type="email" placeholder="Email input">
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+          </div>
+          <p v-if="email2Error" class="help is-danger">This email is invalid</p>
+        </div>
+
+        <div class="field">
           <label class="label" for="password">Password</label>
           <div class="control">
             <input id="password" class="input" type="password" placeholder="Password">
@@ -122,6 +136,7 @@
         data() {
           return {
             email: "",
+            email2: "",
             form: {}
           };
         },
@@ -138,6 +153,9 @@
         computed: {
           emailError() {
             return this.email.length !== 0 && this.email.indexOf('@') === -1;
+          },
+          email2Error() {
+            return this.email2.length !== 0 && this.email2.indexOf('@') === -1;
           }
         }
       };
