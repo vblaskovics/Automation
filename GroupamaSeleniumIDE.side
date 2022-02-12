@@ -273,7 +273,7 @@
     }]
   }, {
     "id": "2847a7c3-e699-4bb2-9fe0-903f9fa930eb",
-    "name": "03_form",
+    "name": "03_form_basic",
     "commands": [{
       "id": "163b0d76-e1eb-43fe-a8f9-d2f90ef553ca",
       "comment": "",
@@ -354,7 +354,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "43a55fe9-99ea-4074-b63f-91b25cc36ed7",
+      "id": "4552c5e2-da86-4af4-8e71-dbf6ae3bd566",
       "comment": "",
       "command": "type",
       "target": "id=email",
@@ -367,10 +367,99 @@
       ],
       "value": "teszt"
     }, {
-      "id": "046bbf4e-25f6-4a6c-b1a2-88d9924fd977",
+      "id": "6a001698-6f1e-48ab-bba6-810e9e1e1686",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "xpath=//p[contains(.,'This email is invalid')]",
+      "target": "xpath=//p[contains(text(),'This email is invalid')]",
+      "targets": [
+        ["css=.help", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'This email is invalid')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c32f0f2-0d6b-4395-9511-92a7a80ef4da",
+      "comment": "5. Ellenőrizd, hogy nem kapunk hibaüzenetet, ha @ karakterrel adunk meg email címet!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43a55fe9-99ea-4074-b63f-91b25cc36ed7",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "teszt@"
+    }, {
+      "id": "3bec4868-261f-49dd-b441-f8106c8ffde8",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "xpath=//p[contains(text(),'This email is invalid')]",
+      "targets": [
+        ["css=.help", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'This email is invalid')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "727591a2-5c8f-4731-899a-42b7175f63c4",
+      "comment": "6. Ellenőrizd, hogy ha az Email-t rosszul töltjük ki, de az Email megerősítése mezőt jól, akkor csak az első esetben kapunk hibaüzenetet!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e439cb77-5da6-42df-84a8-d30001b9388a",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "teszt"
+    }, {
+      "id": "4c86f3a5-0e85-46f1-a3ed-687982b1ee65",
+      "comment": "",
+      "command": "type",
+      "target": "id=email2",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "teszt@"
+    }, {
+      "id": "30741711-7fe1-4692-b693-e9bef93a6229",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//div[contains(@class, \"form\")]/div[2]/p[contains(text(),'This email is invalid')]",
+      "targets": [
+        ["css=.help", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'This email is invalid')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "046bbf4e-25f6-4a6c-b1a2-88d9924fd977",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "//div[contains(@class, \"form\")]/div[3]/p[contains(text(),'This email is invalid')]",
       "targets": [
         ["css=.help", "css:finder"],
         ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
