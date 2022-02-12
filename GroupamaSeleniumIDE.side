@@ -334,7 +334,7 @@
       "value": ""
     }, {
       "id": "ecbd4be3-720a-4774-90d2-4b8f1389b9cb",
-      "comment": "// Ellenőrizd, hogy a Name label össze van-e rendelve az input mezővel!",
+      "comment": "3. Ellenőrizd, hogy a Name label össze van-e rendelve az input mezővel!",
       "command": "",
       "target": "",
       "targets": [],
@@ -348,16 +348,29 @@
       "value": ""
     }, {
       "id": "69c2d05e-1de1-41bd-a4d9-919f66026aa5",
-      "comment": "Ellenőrizd, hogy hibaüzenetet kapunk-e, ha @ karakter nélküli emailcímet adunk meg!",
+      "comment": "4. Ellenőrizd, hogy hibaüzenetet kapunk-e, ha @ karakter nélküli emailcímet adunk meg!",
       "command": "",
       "target": "",
       "targets": [],
       "value": ""
     }, {
-      "id": "d0af9a3c-3d32-4b67-95e3-517495c7eda6",
+      "id": "43a55fe9-99ea-4074-b63f-91b25cc36ed7",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "teszt"
+    }, {
+      "id": "046bbf4e-25f6-4a6c-b1a2-88d9924fd977",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "css=.help",
+      "target": "xpath=//p[contains(.,'This email is invalid')]",
       "targets": [
         ["css=.help", "css:finder"],
         ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
