@@ -2,7 +2,7 @@
   "id": "9fc72b88-0e33-4eaf-9b96-cabb95e84471",
   "version": "2.0",
   "name": "GroupamaSeleniumIDE",
-  "url": "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html",
+  "url": "https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html",
   "tests": [{
     "id": "5b2453c0-1b42-4179-a9b1-82ac04ad3ad0",
     "name": "01_elemek",
@@ -665,6 +665,66 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "efadbafe-7907-4bbe-9f84-3c5947b69e93",
+    "name": "04_if_loop_2",
+    "commands": [{
+      "id": "d27c3e1b-a803-4a81-ba15-0b5963f89033",
+      "comment": "",
+      "command": "open",
+      "target": "https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1dd2872d-021e-41cf-b650-f42b8671a82a",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//img[@alt='freeze']",
+      "targets": [],
+      "value": "freezeCount"
+    }, {
+      "id": "2ff6e3c1-e739-4c85-891b-7024c7186278",
+      "comment": "",
+      "command": "echo",
+      "target": "${freezeCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85de22d3-a2d9-47c4-b87f-58afcad0d9a9",
+      "comment": "",
+      "command": "while",
+      "target": "${freezeCount} == 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2269bcc-5b5b-4791-a9ac-c6ca95566ad7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "location = location",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bcb6c03-7755-4227-a004-3fefc833d0c2",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//img[@alt='freeze']",
+      "targets": [],
+      "value": "freezeCount"
+    }, {
+      "id": "657c275d-7df6-4113-b081-45400563f314",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6dd14d88-867c-4086-a12a-0e1d53d56fdb",
+      "comment": "",
+      "command": "echo",
+      "target": "${freezeCount}",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "244f44f7-6576-4e89-a4e0-e5c78171a6e4",
@@ -674,6 +734,6 @@
     "timeout": 300,
     "tests": ["5b2453c0-1b42-4179-a9b1-82ac04ad3ad0"]
   }],
-  "urls": ["https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html", "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html", "http://127.0.0.1:5500/pages/03_form.html"],
+  "urls": ["https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html", "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html", "http://127.0.0.1:5500/pages/03_form.html", "https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html"],
   "plugins": []
 }
