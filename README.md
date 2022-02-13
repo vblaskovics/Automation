@@ -40,8 +40,9 @@ Az [Űrlap oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/03_
 7. Ellenőrizd, hogy működik a Submit gomb, ha legalább a *-os mezők ki lettek töltve!
 8. Ellenőrizd, hogy nem működik a Submit gomb, ha van *-os mező, ami nincs kitöltve!
 
-### 4. If
+### 4. If, loop
 Az [Időjárás oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html) indulj ki!
 1. Ellenőrizd, hogy megjelenik egy hőmérséklet adat!
 2. Ellenőrizd, hogy ha - a hőmérséklet, akkor megjelenik egy fagyás ikon!
 3. Ellenőrizd, hogy ha + a hőmérséklet, akkor nem jelenik meg fagyás ikon!
+4. Addig frissítsd az oldalt, ameddig nem jelenik meg a fagy ikon!
