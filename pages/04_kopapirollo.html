@@ -39,22 +39,31 @@
       <div class="container block">
         <div class="columns">
           <div class="column is-half">
-            <div class="is-size-3 block">Mit mutatsz?</div>
 
-            <div>
-              <select id="p1show" v-model="p1" class="p-2 block">
-                <option value="kő">Kő</option>
-                <option value="papír">Papír</option>
-                <option value="olló">Olló</option>
-              </select>
+            <div v-if="!endState">
+              <div class="is-size-3 block">Mit mutatsz?</div>
+  
+              <div>
+                <select id="p1show" v-model="p1" class="p-2 block" :disabled="p2 !== '-'">
+                  <option value="kő">Kő</option>
+                  <option value="papír">Papír</option>
+                  <option value="olló">Olló</option>
+                </select>
+              </div>
+              <button v-if="p2 === '-'" @click="generateP2()" id="button-generate" class="button block my-4">Mehet</button>
+              
+              <div v-if="p2 !== '-'">
+                <p class="is-size-3 mt-5">Gép mutatja:</p>
+                <p id="p2show" class="block">{{p2}}</p>
+                <button v-if="p2 !== '-'" @click="endState = true" id="button-next" class="button block my-4">Tovább</button>              
+              </div>
             </div>
 
-            <p class="is-size-3 block">Gép mutatja:</p>
-            <button @click="generateP2()" id="button-generate" class="button block">Mehet</button>
-            <p id="p2show" class="block">{{p2}}</p>
-
-            <p class="is-size-3">Eredmény:</p>
-            <div class="is-size-4 block">{{result}}</div>
+            <div v-if="endState">
+              <p class="is-size-3">Eredmény:</p>
+              <div class="is-size-4 block">{{result}}</div>
+              <button @click="reset()" id="button-re" class="button block my-4">Újra</button>
+            </div>
           </div>
         </div>
       </div>
@@ -66,12 +75,17 @@
             options: ["kő", "papír", "olló"],
             p1: "",
             p2: "-",
+            endState: false
           };
         },
         methods: {
           generateP2() {
             this.p2 =
               this.options[Math.floor(Math.random() * this.options.length)];
+          },
+          reset() {
+            this.p2 = '-'
+            this.endState = false
           },
           pageModify() {
             // document.getElementById('id-field').textContent = "HW/025"
