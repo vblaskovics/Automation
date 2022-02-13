@@ -2,7 +2,7 @@
   "id": "9fc72b88-0e33-4eaf-9b96-cabb95e84471",
   "version": "2.0",
   "name": "GroupamaSeleniumIDE",
-  "url": "http://127.0.0.1:5500/pages/03_form.html",
+  "url": "https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html",
   "tests": [{
     "id": "5b2453c0-1b42-4179-a9b1-82ac04ad3ad0",
     "name": "01_elemek",
@@ -566,6 +566,101 @@
       "id": "2d6425e2-8503-4195-9d7f-6412873f052c",
       "comment": "8. Ellenőrizd, hogy nem működik a Submit gomb, ha van *-os mező, ami nincs kitöltve!",
       "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fb077fec-2ce2-4287-bb79-7ad469be0ae2",
+    "name": "04_if_loop",
+    "commands": [{
+      "id": "6d65711e-224a-4ee6-9d2b-55719b1072cc",
+      "comment": "",
+      "command": "open",
+      "target": "https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf926a72-b1ab-426a-9fe0-14701c785ce5",
+      "comment": "1. Ellenőrizd, hogy megjelenik egy hőmérséklet adat!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ba52421-6497-435f-b9ff-b66e787f7899",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(text(),'°C')]",
+      "targets": [
+        ["css=.is-size-4", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b41ff5e8-c20a-4788-a8ad-484089a54de4",
+      "comment": "2. Ellenőrizd, hogy ha - a hőmérséklet, akkor megjelenik egy fagyás ikon!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0005d4a6-1d90-4b96-94ce-ae44651766fb",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=span:nth-child(1)",
+      "targets": [],
+      "value": "temperature"
+    }, {
+      "id": "cc591f68-d523-4d31-b48f-0a4cc95e8a6f",
+      "comment": "",
+      "command": "echo",
+      "target": "${temperature}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9d6d6b8-3337-4520-9b21-ee3060c05b87",
+      "comment": "",
+      "command": "if",
+      "target": "${temperature} <= 0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "930035a4-ae0a-4085-a420-aa5eac6ada05",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//img[@alt='freeze']",
+      "targets": [
+        ["css=.box > .block", "css:finder"],
+        ["xpath=//img[@alt='freeze']", "xpath:img"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/img", "xpath:idRelative"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86f376a8-001b-43ec-b669-e808d7e20026",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b87a54c-b093-455b-ab91-57d45a758e3a",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "xpath=//img[@alt='freeze']",
+      "targets": [
+        ["css=.box > .block", "css:finder"],
+        ["xpath=//img[@alt='freeze']", "xpath:img"],
+        ["xpath=//div[@id='vue-app']/div[2]/div[2]/img", "xpath:idRelative"],
+        ["xpath=//div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c114d118-6b99-4ff1-b304-26396a7dfe30",
+      "comment": "",
+      "command": "end",
       "target": "",
       "targets": [],
       "value": ""
