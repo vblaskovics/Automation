@@ -18,7 +18,7 @@ A [Hello World oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages
 8. Vegyél fel egy új ellenőrzést a legelső ellenőrzés elé, amiben szintén a HW/001 mező értékét ellenőrzöd! Most is úgy indítsd a tesztet, hogy először az Elront gombra kattintassz, viszont most úgy csináld meg az ellenőrzést, hogy ennél a pontnál ne álljon meg a teszt!
 9. Comment-eld ki az Elront gombra való kattintást!
 
-### 2. Varakozás
+### 2. Várakozás
 
 A [Webshop oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html) indulj ki!
 1. Add hozzá az első terméket a kosárhoz, és ellenőrizd, hogy sikerült-e hozzáadni!
