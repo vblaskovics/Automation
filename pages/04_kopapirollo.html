@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kő-papír-olló</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <script src="https://unpkg.com/vue@next"></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="vue-app">
+      <div class="box">
+        <div class="columns">
+          <div class="column">
+            <div id="main-title" class="title">Kő-papír-olló</div>
+          </div>
+          <div class="column is-flex is-justify-content-flex-end">
+            <div
+              class="button is-info is-align-self-flex-end mr-5"
+              onclick="pageModify()"
+            >
+              Változtat
+            </div>
+            <div class="button is-danger" onclick="pageRuin()">Elront</div>
+          </div>
+        </div>
+      </div>
+      <div class="container block">
+        <div class="columns">
+          <div class="column is-half">
+            <div class="is-size-3 block">Mit mutatsz?</div>
+
+            <div>
+              <select id="p1show" v-model="p1" class="p-2 block">
+                <option value="kő">Kő</option>
+                <option value="papír">Papír</option>
+                <option value="olló">Olló</option>
+              </select>
+            </div>
+
+            <p class="is-size-3 block">Gép mutatja:</p>
+            <button @click="generateP2()" id="button-generate" class="button block">Mehet</button>
+            <p id="p2show" class="block">{{p2}}</p>
+
+            <p class="is-size-3">Eredmény:</p>
+            <div class="is-size-4 block">{{result}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const VueApp = {
+        data() {
+          return {
+            options: ["kő", "papír", "olló"],
+            p1: "",
+            p2: "-",
+          };
+        },
+        methods: {
+          generateP2() {
+            this.p2 =
+              this.options[Math.floor(Math.random() * this.options.length)];
+          },
+          pageModify() {
+            // document.getElementById('id-field').textContent = "HW/025"
+          },
+          pageRuin() {},
+        },
+        computed: {
+          result() {
+            let p1 = this.p1;
+            let p2 = this.p2;
+            if (p1 === "" || p2 === "-") return "-";
+            if (p1 === p2) return "Döntetlen";
+            if (p1 === "kő") {
+              if (p2 === "papír") return "Vesztettél";
+              return "Nyertél";
+            }
+            if (p1 === "papír") {
+              if (p2 === "olló") return "Vesztettél";
+              return "Nyertél";
+            }
+            if (p1 === "olló") {
+              if (p2 === "kő") return "Vesztettél";
+              return "Nyertél";
+            }
+          },
+        },
+      };
+
+      Vue.createApp(VueApp).mount("#vue-app");
+    </script>
+  </body>
+</html>
