@@ -278,7 +278,7 @@
       "id": "163b0d76-e1eb-43fe-a8f9-d2f90ef553ca",
       "comment": "",
       "command": "open",
-      "target": "http://127.0.0.1:5500/pages/03_form.html",
+      "target": "https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html",
       "targets": [],
       "value": ""
     }, {
