@@ -1,6 +1,6 @@
 # Automata teszteléshez példa feladatok
 
-Ez az oldal oktatási céllal készült.
+[Ez az oldal](https://vblaskovics.github.io/GroupamaAutomation) oktatási céllal készült.
 
 Olyan demo felületeket tartalmaz, amelyek segítségével gyakorolni lehet webes automatizált tesztelési kereteket - pl. Selenium IDE-t, és Selenium WebDriver-t.
 
