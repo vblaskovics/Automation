@@ -37,111 +37,151 @@
         </div>
       </div>
 
-      <div class="container form block px-2" style="max-width: 760px;">
-        <div class="field">
-          <label class="label" for="name">Name</label>
-          <div class="control">
-            <input id="name" class="input" type="text" placeholder="Text input">
+      <div class="container form block px-2" style="max-width: 760px">
+        <div v-if="state === 0">
+          <div class="field">
+            <label class="label" for="name">Name</label>
+            <div class="control">
+              <input
+                id="name"
+                class="input"
+                type="text"
+                placeholder="Text input"
+              />
+            </div>
           </div>
-        </div>
-        
-        <div class="field">
-          <label class="label" for="email">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input v-model="email" id="email" class="input" :class="{'is-danger': emailError}" type="email" placeholder="Email input">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
-          </div>
-          <p v-if="emailError" class="help is-danger">This email is invalid</p>
-        </div>
 
-        <div class="field">
-          <label class="label" for="email">Email megerősítése</label>
-          <div class="control has-icons-left has-icons-right">
-            <input v-model="email2" id="email2" class="input" :class="{'is-danger': email2Error}" type="email" placeholder="Email input">
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
+          <div class="field">
+            <label class="label" for="email">Email*</label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                v-model="email"
+                id="email"
+                class="input"
+                :class="{'is-danger': emailError}"
+                type="email"
+                placeholder="Email input"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p v-if="emailError" class="help is-danger">
+              This email is invalid
+            </p>
           </div>
-          <p v-if="email2Error" class="help is-danger">This email is invalid</p>
-        </div>
 
-        <div class="field">
-          <label class="label" for="password">Password</label>
-          <div class="control">
-            <input id="password" class="input" type="password" placeholder="Password">
+          <div class="field">
+            <label class="label" for="email">Email megerősítése*</label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                v-model="email2"
+                id="email2"
+                class="input"
+                :class="{'is-danger': email2Error}"
+                type="email"
+                placeholder="Email input"
+              />
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p v-if="email2Error" class="help is-danger">
+              This email is invalid
+            </p>
           </div>
-        </div>
-        
-        <div class="field">
-          <label class="label">Subject</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
+
+          <div class="field">
+            <label class="label" for="password">Password*</label>
+            <div class="control">
+              <input
+                id="password"
+                class="input"
+                type="password"
+                placeholder="Password"
+                v-model="password"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>Select dropdown</option>
+                  <option>With options</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Textarea"></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Do you want to join our Email List?</label>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="question" />
+                Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="question" />
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input id="terms" v-model="terms" type="checkbox" />
+                I agree to the <a href="#">terms and conditions</a>*
+              </label>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button @click="submit" class="button is-link">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light">Cancel</button>
             </div>
           </div>
         </div>
-        
-        <div class="field">
-          <label class="label">Message</label>
-          <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
-          </div>
-        </div>
-        
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox">
-              I agree to the <a href="#">terms and conditions</a>
-            </label>
-          </div>
-        </div>
-        
-        <div class="field">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="question">
-              Yes
-            </label>
-            <label class="radio">
-              <input type="radio" name="question">
-              No
-            </label>
-          </div>
-        </div>
-        
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link">Submit</button>
-          </div>
-          <div class="control">
-            <button class="button is-link is-light">Cancel</button>
-          </div>
-        </div>
+      </div>
+
+      <div v-if="state === 1" class="is-flex is-justify-content-center is-align-content-center">
+        <h1 class="is-size-2">Thank you for submitting!</h1>
       </div>
     </div>
     <script type="text/javascript">
       const VueApp = {
         data() {
           return {
+            terms: false,
+            password: "",
             email: "",
             email2: "",
-            form: {}
+            state: 0,
           };
         },
         methods: {
-          submit () {},
+          submit() {
+            if (this.terms && this.password && this.email && this.email2) this.state =  1;
+          },
           removeKosar(termek) {
             termek.count--;
           },
@@ -152,12 +192,12 @@
         },
         computed: {
           emailError() {
-            return this.email.length !== 0 && this.email.indexOf('@') === -1;
+            return this.email.length !== 0 && this.email.indexOf("@") === -1;
           },
           email2Error() {
-            return this.email2.length !== 0 && this.email2.indexOf('@') === -1;
-          }
-        }
+            return this.email2.length !== 0 && this.email2.indexOf("@") === -1;
+          },
+        },
       };
 
       Vue.createApp(VueApp).mount("#vue-app");
