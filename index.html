@@ -1,39 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Automata tesztelés feladatok és dummy felületek</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="block"></div>
     <div class="container">
-        <div class="columns block">
-            <div class="column is-one-quarter">
-                <img width="140px" src="assets/logo.png" alt="Training360 logo" class="image">
-            </div>
-            <div class="column">
-                <div id="main-title" class="title">Automata tesztelés feladatok és dummy felületek</div>
-            </div>
+      <div class="columns block">
+        <div class="column is-one-quarter">
+          <img
+            width="140px"
+            src="assets/logo.png"
+            alt="Training360 logo"
+            class="image"
+          />
         </div>
+        <div class="column">
+          <div id="main-title" class="title">
+            Automata teszteléshez feladatok és dummy felületek
+          </div>
+        </div>
+      </div>
 
-        <div class="content block">
-            <h2>Példák</h2>
-            <div class="contain box">
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="pages/01_hello_world.html">Hello World</a>
-                        </h3>
-                    </li>
-                </ul>
-            </div>
-        </div>
+      <div class="content block my-4">
+        <!-- TARTALOM -->
+        <p>Ez az oldal oktatási céllal készült.</p>
+        <p>
+          Olyan demo felületeket tartalmaz, amelyek segítségével gyakorolni
+          lehet webes automatizált tesztelési kereteket - pl. Selenium IDE-t, és
+          Selenium WebDriver-t.
+        </p>
+        <h2 id="dummy-fel-letek">Dummy felületek</h2>
+        <ul>
+          <li>
+            <a
+              href="https://vblaskovics.github.io/GroupamaAutomation/pages/01_hello_world.html"
+              >Hello World</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html"
+              >Webshop</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html"
+              >Űrlap</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html"
+              >Időjárás</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://vblaskovics.github.io/GroupamaAutomation/pages/05_kopapirollo.html"
+              >Kő-papír-olló</a
+            >
+          </li>
+        </ul>
+        <h2 id="feladatok">Feladatok</h2>
+        <h3 id="1-elem-kiv-laszt-sa">1. Elem kiválasztása</h3>
+        <p>
+          A
+          <a
+            href="https://vblaskovics.github.io/GroupamaAutomation/pages/01_hello_world.html"
+            >Hello World oldalból</a
+          >
+          indulj ki!
+        </p>
+        <ol>
+          <li>Ellenőrizd, hogy a böngészőlap címe: &quot;Hello World&quot;!</li>
+          <li>
+            Keresd meg a &quot;Hello Selenium!&quot; elemet az oldalon, és
+            ellenőrizd, hogy a szöveg tartalma valóban &quot;Hello
+            Selenium!&quot; - id alapján!
+          </li>
+          <li>
+            Keresd meg az alcímet, és ellenőrizd, hogy a felírata: &quot;Ez egy
+            alcím&quot; - class alapján!
+          </li>
+          <li>Ellenőrizd, hogy az azonosító: &quot;HW/001&quot;!</li>
+          <li>Ellenőrizd, hogy az email: test@example.com!</li>
+          <li>Ellenőrizd, hogy a dátum 2022.01.03!</li>
+          <li>
+            Indítsd úgy a tesztet, hogy az elején rákattintassz az Elront gombra
+            <ul>
+              <li>Ellenőrizd, hogy a tesztek hibát jeleznek-e!</li>
+              <li>Keresd meg a hibáról készült log-ot!</li>
+            </ul>
+          </li>
+          <li>
+            Vegyél fel egy új ellenőrzést a legelső ellenőrzés elé, amiben
+            szintén a HW/001 mező értékét ellenőrzöd! Most is úgy indítsd a
+            tesztet, hogy először az Elront gombra kattintassz, viszont most úgy
+            csináld meg az ellenőrzést, hogy ennél a pontnál ne álljon meg a
+            teszt!
+          </li>
+          <li>Comment-eld ki az Elront gombra való kattintást!</li>
+        </ol>
+        <h3 id="2-v-rakoz-s">2. Várakozás</h3>
+        <p>
+          A
+          <a
+            href="https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html"
+            >Webshop oldalból</a
+          >
+          indulj ki!
+        </p>
+        <ol>
+          <li>
+            Add hozzá az első terméket a kosárhoz, és ellenőrizd, hogy
+            sikerült-e hozzáadni!
+          </li>
+          <li>
+            Ellenőrizd, hogy tudod-e növelni és csökkenteni a termékek számát!
+          </li>
+          <li>
+            Nyomd meg a második termék Részletek gombját, és ellenőrizd, hogy
+            megjelennek-e a részletek!
+            <ul>
+              <li>Mikor Xpath és mikor css?</li>
+              <li>Várakozni kell</li>
+            </ul>
+          </li>
+          <li>
+            Add hozzá a harmadik terméket is a kosárhoz, és ellenőrizd, hogy
+            sikerült-e hozzáadni! (Figyeld a selector-t!)
+          </li>
+        </ol>
+        <h3 id="3-formok">3. Formok</h3>
+        <p>
+          Az
+          <a
+            href="https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html"
+            >Űrlap oldalból</a
+          >
+          indulj ki!
+        </p>
+        <ol>
+          <li>
+            Írj be a name mezőbe egy nevet, és ellenőrizd, hogy sikerült-e!
+          </li>
+          <li>Ellenőrizd, hogy az email mezőnek van-e placeholder szövege!</li>
+          <li>
+            Ellenőrizd, hogy a Name label össze van-e rendelve az input mezővel!
+          </li>
+          <li>
+            Ellenőrizd, hogy hibaüzenetet kapunk-e, ha @ karakter nélküli
+            emailcímet adunk meg!
+          </li>
+          <li>
+            Ellenőrizd, hogy nem kapunk hibaüzenetet, ha @ karakterrel adunk meg
+            email címet!
+          </li>
+          <li>
+            Ellenőrizd, hogy ha az Email-t rosszul töltjük ki, de az Email
+            megerősítése mezőt jól, akkor csak az első esetben kapunk
+            hibaüzenetet!
+          </li>
+          <li>
+            Ellenőrizd, hogy működik a Submit gomb, ha legalább a *-os mezők ki
+            lettek töltve!
+          </li>
+          <li>
+            Ellenőrizd, hogy nem működik a Submit gomb, ha van *-os mező, ami
+            nincs kitöltve!
+          </li>
+        </ol>
+        <h3 id="4-if-variable-loop">4. If, variable, loop</h3>
+        <p>
+          Az
+          <a
+            href="https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html"
+            >Időjárás oldalból</a
+          >
+          indulj ki!
+        </p>
+        <ol>
+          <li>Ellenőrizd, hogy megjelenik-e hőmérséklet adat!</li>
+          <li>
+            Ellenőrizd, hogy ha - a hőmérséklet, akkor megjelenik egy fagyás
+            ikon!
+          </li>
+          <li>
+            Ellenőrizd, hogy ha + a hőmérséklet, akkor nem jelenik meg fagyás
+            ikon!
+          </li>
+          <li>
+            Addig frissítsd az oldalt, ameddig nem jelenik meg a fagyás ikon!
+          </li>
+        </ol>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>

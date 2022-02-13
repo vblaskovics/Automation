@@ -1,6 +1,16 @@
 # Automata teszteléshez példa feladatok
 
-Ez a repo oktatási céllal készült. Olyan demo felületeket tartalmaz, amelyek segítségével gyakorolni lehet webes automatizált tesztelési kereteket - pl. Selenium IDE-t, és Selenium WebDriver-t.
+Ez az oldal oktatási céllal készült.
+
+Olyan demo felületeket tartalmaz, amelyek segítségével gyakorolni lehet webes automatizált tesztelési kereteket - pl. Selenium IDE-t, és Selenium WebDriver-t.
+
+## Dummy felületek
+- [Hello World](https://vblaskovics.github.io/GroupamaAutomation/pages/01_hello_world.html)
+- [Webshop](https://vblaskovics.github.io/GroupamaAutomation/pages/02_webshop.html)
+- [Űrlap](https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html)
+- [Időjárás](https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html)
+- [Kő-papír-olló](https://vblaskovics.github.io/GroupamaAutomation/pages/05_kopapirollo.html)
+
 
 ## Feladatok
 
@@ -42,7 +52,8 @@ Az [Űrlap oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/03_
 
 ### 4. If, variable, loop
 Az [Időjárás oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html) indulj ki!
-1. Ellenőrizd, hogy megjelenik egy hőmérséklet adat!
+1. Ellenőrizd, hogy megjelenik-e hőmérséklet adat!
 2. Ellenőrizd, hogy ha - a hőmérséklet, akkor megjelenik egy fagyás ikon!
 3. Ellenőrizd, hogy ha + a hőmérséklet, akkor nem jelenik meg fagyás ikon!
 4. Addig frissítsd az oldalt, ameddig nem jelenik meg a fagyás ikon!
+
