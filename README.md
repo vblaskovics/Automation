@@ -30,7 +30,7 @@ A [Webshop oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/02_
 
 
 ### 3. Formok
-A [Form](https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html) indulj ki!
+Az [Űrlap oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html) indulj ki!
 1. Írj be a name mezőbe egy nevet, és ellenőrizd, hogy sikerült-e!
 2. Ellenőrizd, hogy az email mezőnek van-e placeholder szövege!
 3. Ellenőrizd, hogy a Name label össze van-e rendelve az input mezővel!
@@ -39,3 +39,9 @@ A [Form](https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html) in
 6. Ellenőrizd, hogy ha az Email-t rosszul töltjük ki, de az Email megerősítése mezőt jól, akkor csak az első esetben kapunk hibaüzenetet!
 7. Ellenőrizd, hogy működik a Submit gomb, ha legalább a *-os mezők ki lettek töltve!
 8. Ellenőrizd, hogy nem működik a Submit gomb, ha van *-os mező, ami nincs kitöltve!
+
+### 4. If
+Az [Időjárás oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/04_forecast.html) indulj ki!
+1. Ellenőrizd, hogy megjelenik egy hőmérséklet adat!
+2. Ellenőrizd, hogy ha - a hőmérséklet, akkor megjelenik egy fagyás ikon!
+3. Ellenőrizd, hogy ha + a hőmérséklet, akkor nem jelenik meg fagyás ikon!
