@@ -447,25 +447,127 @@
       "id": "30741711-7fe1-4692-b693-e9bef93a6229",
       "comment": "",
       "command": "verifyElementPresent",
-      "target": "//div[contains(@class, \"form\")]/div[2]/p[contains(text(),'This email is invalid')]",
+      "target": "css=.help",
       "targets": [
         ["css=.help", "css:finder"],
-        ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div[2]/p", "xpath:idRelative"],
         ["xpath=//p", "xpath:position"],
         ["xpath=//p[contains(.,'This email is invalid')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97682f5e-2801-4fbf-9364-6aaeb8bb27d1",
+      "comment": "",
+      "command": "verifyElementNotPresent",
+      "target": "css=.field:nth-child(3) > .help",
+      "targets": [
+        ["css=.field:nth-child(3) > .help", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"]
       ],
       "value": ""
     }, {
       "id": "046bbf4e-25f6-4a6c-b1a2-88d9924fd977",
       "comment": "",
       "command": "verifyElementNotPresent",
-      "target": "//div[contains(@class, \"form\")]/div[3]/p[contains(text(),'This email is invalid')]",
+      "target": "xpath=//div[contains(@class, \"form\")]/div/div[3]/p[contains(text(),'This email is invalid')]",
       "targets": [
-        ["css=.help", "css:finder"],
-        ["xpath=//div[@id='vue-app']/div[2]/div[2]/p", "xpath:idRelative"],
-        ["xpath=//p", "xpath:position"],
-        ["xpath=//p[contains(.,'This email is invalid')]", "xpath:innerText"]
+        ["css=.field:nth-child(3) > .help", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div[3]/p", "xpath:idRelative"],
+        ["xpath=//div[3]/p", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "6d922718-8c83-497e-9130-ce5da8a4074e",
+      "comment": "7. Ellenőrizd, hogy működik a Submit gomb, ha legalább a *-os mezők ki lettek töltve!",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d0fabb2-1ea1-4b0b-aba6-18831332b9f4",
+      "comment": "",
+      "command": "//type",
+      "target": "id=email",
+      "targets": [],
+      "value": "teszt@"
+    }, {
+      "id": "fe9976bd-8087-47d0-bfb5-93fa1c2a88db",
+      "comment": "",
+      "command": "//type",
+      "target": "id=email2",
+      "targets": [],
+      "value": "teszt@"
+    }, {
+      "id": "3af40051-2377-4fd5-b011-2ce460271d12",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "asdf"
+    }, {
+      "id": "e05fa53c-9609-43e6-895e-2d8d9027bcf6",
+      "comment": "",
+      "command": "click",
+      "target": "id=terms",
+      "targets": [
+        ["id=terms", "id"],
+        ["css=#terms", "css:finder"],
+        ["xpath=//input[@id='terms']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div[8]/div/label/input", "xpath:idRelative"],
+        ["xpath=//div[8]/div/label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48e7628f-7158-4ae6-9f89-18d97f129e12",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-submit",
+      "targets": [
+        ["id=btn-submit", "id"],
+        ["css=#btn-submit", "css:finder"],
+        ["xpath=//button[@id='btn-submit']", "xpath:attributes"],
+        ["xpath=//div[@id='vue-app']/div[2]/div/div[9]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "691d8148-0eab-4594-83df-7139a1b98b8c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "css=.is-size-2",
+      "targets": [
+        ["css=.is-size-2", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[3]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Thank you for submitting!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ddb944c-c812-4f73-b67b-8ed6abc2f708",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "xpath=//h1[contains(text(),'Thank you for submitting!')]",
+      "targets": [
+        ["css=.is-size-2", "css:finder"],
+        ["xpath=//div[@id='vue-app']/div[3]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Thank you for submitting!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d6425e2-8503-4195-9d7f-6412873f052c",
+      "comment": "8. Ellenőrizd, hogy nem működik a Submit gomb, ha van *-os mező, ami nincs kitöltve!",
+      "command": "",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],

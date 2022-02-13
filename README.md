@@ -31,5 +31,11 @@ A [Webshop oldalból](https://vblaskovics.github.io/GroupamaAutomation/pages/02_
 
 ### 3. Formok
 A [Form](https://vblaskovics.github.io/GroupamaAutomation/pages/03_form.html) indulj ki!
-1. Teszteltd le, hogy ha belekattintassz a név mezőbe, akkor fókuszált állapotba kerül-e!
-
+1. Írj be a name mezőbe egy nevet, és ellenőrizd, hogy sikerült-e!
+2. Ellenőrizd, hogy az email mezőnek van-e placeholder szövege!
+3. Ellenőrizd, hogy a Name label össze van-e rendelve az input mezővel!
+4. Ellenőrizd, hogy hibaüzenetet kapunk-e, ha @ karakter nélküli emailcímet adunk meg!
+5. Ellenőrizd, hogy nem kapunk hibaüzenetet, ha @ karakterrel adunk meg email címet!
+6. Ellenőrizd, hogy ha az Email-t rosszul töltjük ki, de az Email megerősítése mezőt jól, akkor csak az első esetben kapunk hibaüzenetet!
+7. Ellenőrizd, hogy működik a Submit gomb, ha legalább a *-os mezők ki lettek töltve!
+8. Ellenőrizd, hogy nem működik a Submit gomb, ha van *-os mező, ami nincs kitöltve!
