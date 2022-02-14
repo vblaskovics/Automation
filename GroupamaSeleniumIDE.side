@@ -10,7 +10,7 @@
       "id": "e327c018-673e-4e76-a106-3fa1b5d1479d",
       "comment": "",
       "command": "open",
-      "target": "https://vblaskovics.github.io/GroupamaAutomation/01_hello_world/01_hello_world.html",
+      "target": "https://vblaskovics.github.io/GroupamaAutomation/pages/01_hello_world.html",
       "targets": [],
       "value": ""
     }, {

@@ -1,0 +1,112 @@
+{
+  "id": "dc29bbcf-91b0-44aa-a6d7-6444a6eaaaf9",
+  "version": "2.0",
+  "name": "Memory",
+  "url": "https://leftstick.github.io/react-resso-memory-game/",
+  "tests": [{
+    "id": "b7a48e8c-8d4c-4ff3-ad1a-c744fa98cd85",
+    "name": "memory-1",
+    "commands": [{
+      "id": "b6d93739-b7e1-45c8-bde7-b77b79b50a95",
+      "comment": "",
+      "command": "open",
+      "target": "https://leftstick.github.io/react-resso-memory-game/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71bbaa2f-7c78-4eb7-86df-fefb5c1f26ae",
+      "comment": "Keress egyező párt, és nézd meg, hogy csökken-e a számláló",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a42b7b8-7f5e-4a91-a837-06bb1ec36cd3",
+      "comment": "",
+      "command": "store",
+      "target": "2",
+      "targets": [],
+      "value": "ind"
+    }, {
+      "id": "a794c5f0-eb87-4da6-91c0-34dfd1f97af8",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class, 'flipped___3eaR3')]",
+      "targets": [],
+      "value": "flipped"
+    }, {
+      "id": "cb9c7c86-6b69-44b7-87fb-04bdb7853a84",
+      "comment": "",
+      "command": "pause",
+      "target": "2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f565550-a954-41a1-9b11-a694d9cc34e1",
+      "comment": "",
+      "command": "while",
+      "target": "${flipped} < 2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdceaa60-6c0b-46c1-bd45-5f3e9bcc6b82",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[contains(@class, 'flipped___3eaR3')]",
+      "targets": [],
+      "value": "flipped"
+    }, {
+      "id": "4c161608-11e8-4b71-8961-85361e3cc8ad",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//img[@alt='back-card'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e0820a0-62c0-4ce4-99e2-236a57a93a02",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//img[@alt='back-card'])[${ind}]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcad7523-b06d-4f39-8111-9b9a045347ae",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0c998fe-db15-43f9-9298-786d6396b725",
+      "comment": "",
+      "command": "store",
+      "target": "${ind} + 1",
+      "targets": [],
+      "value": "ind"
+    }, {
+      "id": "4424a96a-c8d3-4196-83f6-4fbeaf6d5e98",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75ba1e28-8b9c-47b1-8a72-4b4e1f417f23",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.board___2qKNb > h2",
+      "targets": [],
+      "value": "7"
+    }]
+  }],
+  "suites": [{
+    "id": "8360d0ac-8572-4058-bec8-3a0242a4904e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b7a48e8c-8d4c-4ff3-ad1a-c744fa98cd85"]
+  }],
+  "urls": ["https://bobby-saul.itch.io/turkey-hunt", "https://leftstick.github.io/react-resso-memory-game/"],
+  "plugins": []
+}

@@ -57,3 +57,6 @@ Az [Időjárás oldalból](https://vblaskovics.github.io/GroupamaAutomation/page
 3. Ellenőrizd, hogy ha + a hőmérséklet, akkor nem jelenik meg fagyás ikon!
 4. Addig frissítsd az oldalt, ameddig nem jelenik meg a fagyás ikon!
 
+### 5. Kő-papír-olló
+Az [Kő-papír-olló](https://vblaskovics.github.io/GroupamaAutomation/pages/05_forecast.html) indulj ki!
+1. Teszteld le, hogy a program mindig szabályosan értékeli ki a lépéseket!
