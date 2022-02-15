@@ -1,0 +1,49 @@
+<body>
+  <div class="columns is-mobile">
+    <div class="column">Első</div>
+    <div class="column">Második</div>
+    <div class="column">Harmadik</div>
+    <div class="column">Negyedik</div>
+  </div>
+
+  <div class="box">I'm in a box.</div>
+
+  <form class="box is-primary">
+    <div class="field is-flex">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input" type="email" placeholder="e.g. alex@example.com" />
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input class="input" type="password" placeholder="********" />
+      </div>
+    </div>
+
+    <button class="button is-primary">Sign in</button>
+  </form>
+
+  <ul id="list-items">
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+
+  <div class="control has-icons-left">
+    <div class="select is-small">
+      <select>
+        <option>Country</option>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+    <span class="icon is-small is-left">
+      <i class="fas fa-globe"></i>
+    </span>
+  </div>
+
+
+</body>
