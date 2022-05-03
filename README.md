@@ -9,7 +9,7 @@ Olyan demo felületeket tartalmaz, amelyek segítségével gyakorolni lehet webe
 - [Webshop](https://vblaskovics.github.io/Automation/pages/02_webshop.html)
 - [Űrlap](https://vblaskovics.github.io/Automation/pages/03_form.html)
 - [Időjárás](https://vblaskovics.github.io/Automation/pages/04_forecast.html)
-- [Kő-papír-olló](https://vblaskovics.github.io/Automation/pages/05_kopapirollo.html)
+- [Kő, papír, olló](https://vblaskovics.github.io/Automation/pages/05_kopapirollo.html)
 
 
 ## Feladatok
